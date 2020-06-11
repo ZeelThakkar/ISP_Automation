@@ -36,6 +36,11 @@ public class LoginPage extends TestBase {
         return ISPLogo;
     }
 
+    public String verifyCurrentUrl() {
+        String url = driver.getCurrentUrl();
+        return url;
+    }
+
     public UserDashboard Login(String un, String pwd) {
         username.sendKeys(un);
         password.sendKeys(pwd);

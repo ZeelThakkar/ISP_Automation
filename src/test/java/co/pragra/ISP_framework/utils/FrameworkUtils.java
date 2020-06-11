@@ -21,8 +21,4 @@ public static void captureScreenshot() {
     }
 }
 
-
-
-
-
 }

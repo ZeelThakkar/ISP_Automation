@@ -19,8 +19,8 @@ public class TestBase {
     public TestBase() {
         try {
             prop = new Properties();
-            FileInputStream ip = new FileInputStream("C:\\Users\\Nishant\\IdeaProjects\\ISP_Database\\src\\test\\java" +
-                    "\\co\\pragra\\ISP_framework\\Config.properties");
+            FileInputStream ip = new FileInputStream("C://Users//Nishant//IdeaProjects//ISP_Database//src//test//java" +
+                    "//co//pragra//ISP_framework//config//Config.properties");
             prop.load(ip);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
