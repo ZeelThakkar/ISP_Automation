@@ -50,6 +50,12 @@
             <version>${extent.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
         <!--logging reports for generating logs-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
