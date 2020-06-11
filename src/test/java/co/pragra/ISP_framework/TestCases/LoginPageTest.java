@@ -1,4 +1,10 @@
 package co.pragra.ISP_framework.TestCases;
 
-public class LoginPageTest {
+import co.pragra.ISP_framework.base.TestBase;
+
+public class LoginPageTest extends TestBase {
+
+
+
+
 }
