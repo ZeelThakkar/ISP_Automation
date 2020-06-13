@@ -26,7 +26,7 @@ public class LoginPage extends TestBase {
     }
 
     //  Actions:
-    public String validateLoginPageTitle() {
+    public String verifyLoginPageTitle() {
         String title = driver.getTitle();
         return title;
     }

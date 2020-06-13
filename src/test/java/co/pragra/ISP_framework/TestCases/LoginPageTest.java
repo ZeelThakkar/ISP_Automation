@@ -4,15 +4,13 @@ import co.pragra.ISP_framework.base.TestBase;
 import co.pragra.ISP_framework.pages.LoginPage;
 import co.pragra.ISP_framework.pages.UserDashboard;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class LoginPageTest extends TestBase {
     LoginPage loginPage;
     UserDashboard userDashboard;
 
-    @BeforeMethod
+    @BeforeSuite
     public void setUp() {
         initialization();
         loginPage = new LoginPage();
@@ -24,8 +22,8 @@ public class LoginPageTest extends TestBase {
     }
 
     @Test
-    public void validateLoginPageTitleTest() {
-        String title = loginPage.validateLoginPageTitle();
+    public void verifyLoginPageTitleTest() {
+        String title = loginPage.verifyLoginPageTitle();
         Assert.assertEquals(title,"User Dashboard | ISP Cloud");
     }
 
@@ -38,10 +36,10 @@ public class LoginPageTest extends TestBase {
     @Test
     public void verifyCurrentUrlTest() {
         String currentUrl = loginPage.verifyCurrentUrl();
-        Assert.assertTrue(currentUrl.contains("user_login"),"You are on the wrong page!!");
+        Assert.assertTrue(currentUrl.contains("user_login"),"The current url does not match!!");
     }
 
-    @AfterMethod
+    @AfterSuite
     public void tearDown() {
         driver.quit();
     }
