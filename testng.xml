@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ISP Database Test Automation Suite">
+<suite name="ISP Database Test Automation">
 
     <listeners>
         <listener class-name="co.pragra.ISP_framework.listeners.TestListener" />
@@ -10,6 +10,7 @@
         <classes>
 
             <class name="co.pragra.ISP_framework.TestCases.LoginPageTest"></class>
+            <class name="co.pragra.ISP_framework.TestCases.UserDashboardTest"></class>
 
         </classes>
     </test>

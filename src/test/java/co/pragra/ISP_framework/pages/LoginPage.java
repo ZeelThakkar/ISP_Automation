@@ -9,10 +9,10 @@ public class LoginPage extends TestBase {
 
     //  Object repositories:
     @FindBy(id = "email")
-    WebElement username;
+    WebElement userName;
 
     @FindBy(id = "password")
-    WebElement password;
+    WebElement Password;
 
     @FindBy(xpath = "//input[@type='submit']")
     WebElement loginBtn;
@@ -42,8 +42,8 @@ public class LoginPage extends TestBase {
     }
 
     public UserDashboard Login(String un, String pwd) {
-        username.sendKeys(un);
-        password.sendKeys(pwd);
+        userName.sendKeys(un);
+        Password.sendKeys(pwd);
         loginBtn.click();
         return new UserDashboard();
     }

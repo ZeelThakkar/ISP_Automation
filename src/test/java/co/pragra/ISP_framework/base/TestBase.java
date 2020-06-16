@@ -45,7 +45,7 @@ public class TestBase {
         //     Managing the features of driver..
         driver.manage().window().fullscreen();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
         //     Fetching the application url from the properties file..
         driver.get(prop.getProperty("url"));

@@ -4,40 +4,44 @@ import co.pragra.ISP_framework.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class UserDashboard extends TestBase {
 
-    @FindBy(partialLinkText = "Students")
+    @FindBy(xpath = "//div[@class = 'panel-heading panel-blue' and @id = 'headingOne']")
     WebElement studentsTab;
 
-    @FindBy(partialLinkText = "Homestays")
+    @FindBy(xpath = "//h3[text()=' Homestays']")
     WebElement homestaysTab;
 
-    @FindBy(partialLinkText = "Agents")
+    @FindBy(xpath = "//h3[text()=' Agents']")
     WebElement agentsTab;
 
-    @FindBy(partialLinkText = "Classes")
+    @FindBy(xpath = "//h3[text()=' Classes']")
     WebElement classesTab;
 
-    @FindBy(partialLinkText = "Attendance")
+    @FindBy(xpath = "//h3[text()=' Attendance']")
     WebElement attendanceTab;
 
-    @FindBy(partialLinkText = "Letters")
+    @FindBy(xpath = "//h3[text()=' Letters']")
     WebElement lettersTab;
 
-    @FindBy(partialLinkText = "Reports")
+    @FindBy(xpath = "//h3[text()=' Reports']")
     WebElement reportsTab;
 
-    @FindBy(partialLinkText = "Settings")
+    @FindBy(xpath = "//h3[text()=' Settings']")
     WebElement settingsTab;
 
-    @FindBy(partialLinkText = "Audit Log")
+    @FindBy(xpath = "//h3[text()=' Audit Log']")
     WebElement auditLogTab;
 
-    @FindBy(partialLinkText = "Integrations")
+    @FindBy(xpath = "//h3[text()=' Integrations']")
     WebElement integrationsTab;
 
-    @FindBy(partialLinkText = "Class Generator")
+    @FindBy(xpath = "//h3[text()=' Class Generator']")
     WebElement classGeneratorTab;
 
     @FindBy(className = "navbar-logo active")
@@ -112,14 +116,11 @@ public class UserDashboard extends TestBase {
         return clasGenTab;
     }
 
-
-
-
-
-
-
-
-
-
-
+    public StudentModule clickOnStudentModule() throws InterruptedException {
+       // WebDriverWait wait = new WebDriverWait(driver,30);
+       // wait.until(ExpectedConditions.visibilityOf(studentsTab));
+        Thread.sleep(15000);
+        studentsTab.click();
+        return new StudentModule();
+    }
 }
