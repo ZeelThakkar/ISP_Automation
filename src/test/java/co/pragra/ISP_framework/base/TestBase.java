@@ -43,7 +43,7 @@ public class TestBase {
         }
 
         //     Managing the features of driver..
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 

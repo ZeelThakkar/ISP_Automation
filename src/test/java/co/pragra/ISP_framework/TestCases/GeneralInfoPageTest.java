@@ -1,20 +1,18 @@
 package co.pragra.ISP_framework.TestCases;
 
 import co.pragra.ISP_framework.base.TestBase;
-import co.pragra.ISP_framework.pages.GeneralInfoPage;
-import co.pragra.ISP_framework.pages.LoginPage;
-import co.pragra.ISP_framework.pages.StudentModule;
-import co.pragra.ISP_framework.pages.UserDashboard;
+import co.pragra.ISP_framework.pages.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class StudentModuleTest extends TestBase {
+public class GeneralInfoPageTest extends TestBase {
     LoginPage loginPage;
     UserDashboard userDashboard;
     StudentModule studentModule;
     GeneralInfoPage generalInfoPage;
+    GeneralInfoSection generalInfoSection;
 
     @BeforeSuite
     public void setUp() throws InterruptedException {
@@ -22,17 +20,12 @@ public class StudentModuleTest extends TestBase {
         loginPage = new LoginPage();
         userDashboard = loginPage.Login(prop.getProperty("username"),prop.getProperty("password"));
         studentModule = userDashboard.clickOnStudentModule();
-    }
-
-    @Test
-    public void verifyCurrentUrlTest() {
-        String Url = studentModule.verifyCurrentUrl();
-        Assert.assertTrue(Url.contains("student/datasheet"), "The current url does not match!!");
-    }
-
-    @Test
-    public void clickOnGenInfoTabTest() throws InterruptedException {
         generalInfoPage = studentModule.clickOnGenInfoTab();
+    }
+
+    @Test
+    public void clickOnAddNewStudentTest() {
+        generalInfoSection = generalInfoPage.clickOnAddNewStudent();
     }
 
     @AfterSuite

@@ -32,16 +32,4 @@ public class GeneralInfoSection extends TestBase {
 
     @FindBy(id = "stdPhone")
     WebElement stuPhone;
-
-    @FindBy(id = "")
-    WebElement bDate;
-
-
-
-
-
-
-
-
-
 }

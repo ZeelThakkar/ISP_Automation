@@ -19,12 +19,9 @@ public class StudentModule extends TestBase {
         return url;
     }
 
-    public GeneralInfoSection clickOnGenInfoTab() throws InterruptedException {
-        Thread.sleep(30000);
+    public GeneralInfoPage clickOnGenInfoTab() throws InterruptedException {
+        Thread.sleep(15000);
         GenInfoTab.click();
-        return new GeneralInfoSection();
+        return new GeneralInfoPage();
     }
-
-
-
 }
