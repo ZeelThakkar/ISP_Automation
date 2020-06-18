@@ -24,7 +24,7 @@ public class GeneralInfoPageTest extends TestBase {
     }
 
     @Test
-    public void clickOnAddNewStudentTest() {
+    public void clickOnAddNewStudentTest() throws InterruptedException {
         generalInfoSection = generalInfoPage.clickOnAddNewStudent();
     }
 

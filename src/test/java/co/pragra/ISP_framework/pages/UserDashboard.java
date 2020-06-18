@@ -119,7 +119,8 @@ public class UserDashboard extends TestBase {
     public StudentModule clickOnStudentModule() throws InterruptedException {
        // WebDriverWait wait = new WebDriverWait(driver,30);
        // wait.until(ExpectedConditions.visibilityOf(studentsTab));
-        Thread.sleep(15000);
+        Thread.sleep(45000);
+        driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
         studentsTab.click();
         return new StudentModule();
     }

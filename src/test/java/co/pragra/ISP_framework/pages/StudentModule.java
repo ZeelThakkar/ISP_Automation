@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class StudentModule extends TestBase {
 
     @FindBy(partialLinkText = "General Information")
@@ -20,7 +22,8 @@ public class StudentModule extends TestBase {
     }
 
     public GeneralInfoPage clickOnGenInfoTab() throws InterruptedException {
-        Thread.sleep(15000);
+        Thread.sleep(50000);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         GenInfoTab.click();
         return new GeneralInfoPage();
     }

@@ -14,7 +14,8 @@ public class GeneralInfoPage extends TestBase {
         PageFactory.initElements(driver,this);
     }
 
-    public GeneralInfoSection clickOnAddNewStudent() {
+    public GeneralInfoSection clickOnAddNewStudent() throws InterruptedException {
+        Thread.sleep(20000);
         addStudent.click();
         return new GeneralInfoSection();
     }
